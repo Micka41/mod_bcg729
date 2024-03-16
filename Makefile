@@ -1,7 +1,7 @@
 ################################
 ### FreeSwitch headers files found in libfreeswitch-dev ###
-FS_INCLUDES=/usr/local/include/freeswitch
-FS_MODULES=/usr/local/lib/freeswitch/mod
+FS_INCLUDES=/usr/include/freeswitch
+FS_MODULES=/usr/lib/freeswitch/mod
 ################################
 
 ### END OF CUSTOMIZATION ###
@@ -22,7 +22,7 @@ mod_bcg729.o: bcg729 mod_bcg729.c
 
 clone_bcg729:
 	if [ ! -d bcg729 ]; then \
-		git clone https://github.com/BelledonneCommunications/bcg729.git; \
+		git clone https://gitlab.linphone.org/BC/public/bcg729; \
 	fi
 	pushd bcg729; git fetch; git checkout 1.1.1; popd;
 
